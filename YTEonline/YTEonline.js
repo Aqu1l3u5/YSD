@@ -1,7 +1,7 @@
 function ouvrirDoc () {
     var fileSystem=new
     ActiveXObject("Scripting.FileSystemObject");
-    var nomFichier = prompt("nom et chemin du fichier : ");
+    var nomFichier = document.getElementById("choixFichierOuvrir").val;
     var monFichier=fileSystem.OpenTextFile(nomFichier, 1 ,true);
     document.getElementById("zoneTexte").innerHTML += monFichier.ReadAll();
     monFichier.Close();
@@ -10,7 +10,7 @@ function ouvrirDoc () {
 function enregistrerDoc () {
     var fileSystem=new
     ActiveXObject("Scripting.FileSystemObject");
-    var nomFichier = prompt("nom et chemin du fichier : ");
+    var nomFichier = document.getElementById("choixFichierEnregistrer").val;
     var texte = document.getElementById("zoneTexte").value;
     var monFichier=fileSystem.OpenTextFile("tutorielsenfolie.txt", 2 ,true);
     monFichier.WriteLine(texte);
