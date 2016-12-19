@@ -1,5 +1,6 @@
 function ouvrirDoc () {
-    
+    var fileSystem=new 
+    ActiveXObject("Scripting.FileSystemObject");
 }
 
 function enregistrerDoc () {
