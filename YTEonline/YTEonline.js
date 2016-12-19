@@ -2,8 +2,9 @@ function ouvrirDoc () {
     var fileSystem=new 
     ActiveXObject("Scripting.FileSystemObject");
     var nomFichier = prompt("nom et chemin du fichier : ");
-    monfichier=fileSystem.OpenTextFile(nomFichier, 1 ,true);
-    var texte = document.getElementById("zoneTexte").value; 
+    var monFichier=fileSystem.OpenTextFile(nomFichier, 1 ,true);
+    document.getElementById("zoneTexte").innerHTML += monFichier.ReadAll();
+    monFichier.Close();
 }
 
 function enregistrerDoc () {
