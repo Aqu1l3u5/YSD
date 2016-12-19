@@ -12,7 +12,9 @@ function enregistrerDoc () {
     ActiveXObject("Scripting.FileSystemObject");
     var nomFichier = prompt("nom et chemin du fichier : ");
     var texte = document.getElementById("zoneTexte").value;
-    
+    var monFichier=fileSystem.OpenTextFile("tutorielsenfolie.txt", 2 ,true);
+    monFichier.WriteLine(texte);
+    monFichier.Close();    
 }
 
 var boutonOuvrirElt = document.getElementById("boutonOuvrir");
