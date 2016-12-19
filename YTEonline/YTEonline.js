@@ -10,7 +10,7 @@ function ouvrirDoc () {
 function enregistrerDoc () {
     var fileSystem=new
     ActiveXObject("Scripting.FileSystemObject");
-    var nomFichier = document.getElementById("choixFichierEnregistrer").val;
+    var nomFichier = prompt("nom du fichier : ");
     var texte = document.getElementById("zoneTexte").value;
     var monFichier=fileSystem.OpenTextFile(nomFichier, 2 ,true);
     monFichier.WriteLine(texte);
