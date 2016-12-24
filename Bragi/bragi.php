@@ -12,7 +12,6 @@
      			<input type="submit" name="ouvrir" value="Ouvrir">
 		</form>
 				<?php
-					include_once("geshi.php");
 					$texte = ""; 
 					if (!isset($_FILES["nomFichierOuvrir"]["name"]))
 					{
@@ -47,7 +46,7 @@
 		<form action="cibleBragi.php" method="post">
 			<input type="text" name="nomFichier" value="Nom de votre fichier" />
 			<input type="submit" value="Enregistrer" />
-			<textarea name="texte" rows="50" cols="170"><?php geshi_highlight($texte, "python", $path); ?></textarea> 
+			<textarea name="texte" rows="50" cols="170"><?php echo $texte; ?></textarea> 
 		</form>>
 	</body>
 </html>
